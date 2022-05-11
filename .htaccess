@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^index.html$ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^phim/([a-zA-Z0-9-_]*).([0-9]*).html$ view.php?film=$2 [L]
+RewriteRule ^(danh-sach-phim|danh-sach-phim/)$ listmovie.php [L]
+RewriteRule ^xem-phim/([a-zA-Z0-9-_]*).([0-9]*).html$ play.php?film=$2 [L]
+
